@@ -2,14 +2,14 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_sales'
-  s.version     = '3.0.0'
+  s.version     = '3.3.0'
   s.summary     = 'Add sales prices to products'
   s.description = 'Add sales prices to products'
-  s.required_ruby_version = '>= 2.1.0'
+  s.required_ruby_version = '>= 2.2.7'
 
-  s.author    = 'Gonzalo Moreno'
-  s.email     = 'gmoreno@acid.cl'
-  s.homepage  = 'http://www.acid.cl'
+  s.author    = 'Vincent K Edison'
+  s.email     = 'vincent@luxodev.com'
+  s.homepage  = 'https://www.luxodev.com'
   s.license   = 'MIT'
 
   #s.files       = `git ls-files`.split("\n")
@@ -17,14 +17,14 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.0.0'
-  s.add_dependency 'spree_frontend', '~> 3.0.0'
+  s.add_dependency 'spree_core', '~> 3.3.0'
+  s.add_dependency 'spree_frontend', '~> 3.3.0'
   s.add_dependency 'date_validator'
+  s.add_dependency 'spree_extension'
 
-
-  s.add_development_dependency 'capybara', '~> 2.1'
-  s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'capybara', '~> 2.7'
+  s.add_development_dependency 'coffee-rails', '~> 4.2'
+  s.add_development_dependency 'database_cleaner', '~> 1.5'
   s.add_development_dependency 'factory_girl', '~> 4.4'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'rspec-rails',  '~> 2.13'
