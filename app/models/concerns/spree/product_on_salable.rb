@@ -17,8 +17,8 @@ module Spree
                           joins(master: :sale_prices)
                           .where(spree_sale_prices: {enabled: true})
                           .where('spree_sale_prices.value < spree_prices.amount')
-                          .where('spree_sale_prices.start_at <= ? OR spree_sale_prices.start_at IS NULL', Time.now)
-                          .where('spree_sale_prices.end_at   >= ? OR spree_sale_prices.end_at   IS NULL', Time.now)
+                          .where('spree_sale_prices.start_at <= ? OR spree_sale_prices.start_at IS NULL', Time.now.round)
+                          .where('spree_sale_prices.end_at   >= ? OR spree_sale_prices.end_at   IS NULL', Time.now.round)
                           .uniq
                          }
     end

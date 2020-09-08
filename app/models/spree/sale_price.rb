@@ -17,7 +17,7 @@ module Spree
 
     delegate_belongs_to :default_price, :currency
 
-    scope :active, -> { where(enabled: true).where('(start_at <= ? OR start_at IS NULL) AND (end_at >= ? OR end_at IS NULL)', Time.now, Time.now) }
+    scope :active, -> { where(enabled: true).where('(start_at <= ? OR start_at IS NULL) AND (end_at >= ? OR end_at IS NULL)', Time.now.round, Time.now.round) }
 
     # TODO make this work or remove it
     #def self.calculators
